@@ -1,6 +1,7 @@
 import './globals.css'
 import Navbar from '@/components/layout/Navbar/Navbar';
 import { Karma } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/react';
 
 const karma = Karma({ subsets: ['latin'], weight: ['400', '600', '700']})
 
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body className={karma.className}>
         <Navbar />  
         {children}
+        <Analytics />
       </body>
     </html>
   )
