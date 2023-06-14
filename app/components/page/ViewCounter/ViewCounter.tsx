@@ -4,6 +4,6 @@ export default async function ViewCounter() {
     const analytics = await getAnalyticsData();
 
     return (
-        <p>This website has been watched {analytics.pageviewCount} times ✨</p>
+        <p>This website has been watched {analytics.pageviewCount || '😳'} times ✨</p>
     )
 }

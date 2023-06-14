@@ -16,5 +16,10 @@ export async function getAnalyticsData() {
     },
   })
  
-  return res.json().then((projects) => projects.find((pr: Project) => pr.projectId == process.env.VERCEL_PROJECT_ID));
+  return res.json().then((projects) => {
+    if (!projects || !Array.isArray(projects)) {
+        return {};
+    }
+    return projects.find((pr: Project) => pr.projectId == process.env.VERCEL_PROJECT_ID)
+  });
 }
