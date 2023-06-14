@@ -1,9 +1,7 @@
 * {
   margin: 0;
-  margin-block: 0;
   margin-inline: 0;
   padding: 0;
-  padding-block: 0;
   padding-inline: 0;
 }
 
@@ -18,4 +16,10 @@ body {
 
 header {
   padding-bottom: 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    padding: 1rem;
+  }
 }

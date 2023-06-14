@@ -1,10 +1,9 @@
-'use client';
-import { useState } from 'react';
+import { getAnalyticsData } from '@/app/lib/analytic';
 
-export default function ViewCounter() {
-    const [view, setView] = useState(123);
+export default async function ViewCounter() {
+    const analytics = await getAnalyticsData();
 
     return (
-        <p>This website has been watched {view} times ✨</p>
+        <p>This website has been watched {analytics.pageviewCount} times ✨</p>
     )
 }
