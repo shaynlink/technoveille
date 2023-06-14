@@ -1,7 +1,14 @@
 .hero {
-  margin: 10em 0;
+  margin: 8em 0;
 }
 
 .title {
   font-size: 30px;
+}
+
+.articles_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 3rem;
 }

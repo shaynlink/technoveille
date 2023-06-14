@@ -1,5 +1,22 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.vox-cdn.com',
+        port: '',
+        pathname: '/thumbor/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'f.hellowork.com',
+        port: '',
+        pathname: '/blogdumoderateur/**'
+      }
+    ]
+  }
+}
 
 module.exports = nextConfig
 

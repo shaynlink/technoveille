@@ -1,5 +1,6 @@
-import ViewCounter from '@/components/page/ViewCounter/ViewCounter'
-import styles from './page.module.css'
+import ViewCounter from './components/page/ViewCounter/ViewCounter';
+import styles from './page.module.css';
+import Articles from './components/Articles/Articles';
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
         <h1 className={styles.title}>News technologic</h1>
 
         <div className={styles.articles_container}>
-          {/*<Articles /> */}
+          <Articles />
         </div>
       </section>
     </main>

@@ -1,5 +1,5 @@
-import './globals.css'
-import Navbar from '@/components/layout/Navbar/Navbar';
+import './globals.css';
+import Navbar from '@/app/components/layout/Navbar/Navbar';
 import { Karma } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -17,6 +17,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preload" href="/api/news" as="fetch" crossOrigin="anonymous" />
+      </head>
       <body className={karma.className}>
         <Navbar />  
         {children}
