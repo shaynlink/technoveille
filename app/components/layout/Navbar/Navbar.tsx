@@ -1,9 +1,9 @@
-import styles from './Navbar.module.css';
-
 export default function Navbar() {
     return (
-        <header>
-            <p className={styles.name}>Shaynlink&apos;s technoveille</p>
+        <header className="max-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <nav className="relative flex h-16 items-center justify-between">
+                <h1 className="t">Shaynlink&apos;s technoveille</h1>
+            </nav>
         </header>
     )
 }

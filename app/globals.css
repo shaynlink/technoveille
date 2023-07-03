@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   margin-inline: 0;
@@ -8,18 +12,4 @@
 a {
   color: unset;
   text-decoration: unset;
-}
-
-body {
-  padding: 1rem 3rem;
-}
-
-header {
-  padding-bottom: 1rem;
-}
-
-@media only screen and (max-width: 640px) {
-  body {
-    padding: 1rem;
-  }
 }

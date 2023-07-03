@@ -1,9 +1,18 @@
-import { getAnalyticsData } from '@/app/lib/analytic';
+'use client';
+import useSWR from 'swr';
 
-export default async function ViewCounter() {
-    const analytics = await getAnalyticsData();
+const fetcher = (url: string) => fetch(url).then((res) => res.json());
 
-    return (
-        <p>This website has been watched {analytics.pageviewCount || '😳'} times ✨</p>
-    )
+export default function ViewCounter() {
+    const { data, error, isLoading } = useSWR<{result?: number | string}>('/api/analytics', fetcher);
+
+    if (error || data?.result === 'unknown') {
+        return <p>Failed to getting watched count</p>
+    }
+
+    if (isLoading || !data) {
+        return <p>Getting watched count view ...</p>
+    }
+
+    return <p>This website has been watched {data.result} times ✨</p>
 }

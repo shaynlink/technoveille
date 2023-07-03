@@ -1,4 +1,4 @@
-export type News = {
+export interface News {
     id: string;
     from: string;
     published: string;
@@ -10,3 +10,12 @@ export type News = {
     link: string;
     author: string;
 };
+
+export interface Project {
+    timestamp: string;
+    projectName: string;
+    projectId: string;
+    count: number;
+    eventCount: number;
+    pageviewCount: number;
+}   
